@@ -60,3 +60,7 @@ func (b *backOffContext) NextBackOff() time.Duration {
 		return b.BackOff.NextBackOff()
 	}
 }
+
+func (b *backOffContext) Reset() {
+	b.BackOff.Reset()
+}
